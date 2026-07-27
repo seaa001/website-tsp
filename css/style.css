@@ -17,7 +17,63 @@ body {
     min-height: 100vh; 
 }
 
-/* --- NAVIGASI UTAMA (NAVBAR) --- */
+/* =========================================
+   1. SPLASH SCREEN (HALAMAN UTAMA/INDEX)
+   ========================================= */
+body.splash-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #023e8a, #0077b6);
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.splash-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.splash-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.splash-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 35px;
+}
+
+/* Animasi Putaran Loading */
+.loader {
+    width: 45px;
+    height: 45px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20deg); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   2. NAVIGASI UTAMA (NAVBAR)
+   ========================================= */
 .navbar {
     display: flex; 
     justify-content: space-between; 
@@ -56,7 +112,7 @@ body {
     color: #0077b6; 
 }
 
-/* --- MENU HAMBURGER (HP) --- */
+/* Menu Hamburger HP */
 .menu-toggle {
     display: none; 
     flex-direction: column; 
@@ -72,7 +128,7 @@ body {
     border-radius: 5px; 
 }
 
-/* --- BANNER HEADER --- */
+/* Banner Header */
 .hero, .page-header {
     background: linear-gradient(135deg, #023e8a, #0077b6);
     color: white;
@@ -91,7 +147,9 @@ body {
     opacity: 0.9;
 }
 
-/* --- HALAMAN BERANDA (HOME) --- */
+/* =========================================
+   3. HALAMAN BERANDA (HOME)
+   ========================================= */
 .main-container {
     width: 100%;
     max-width: 1100px;
@@ -102,7 +160,6 @@ body {
     gap: 30px;
 }
 
-/* GAMBAR BANNER / FOTO TSP CLUB */
 .image-banner {
     width: 100%;
     border-radius: 12px;
@@ -171,8 +228,18 @@ body {
 }
 
 .product-icon {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .product-card h3 {
@@ -187,7 +254,9 @@ body {
     line-height: 1.5;
 }
 
-/* --- HALAMAN KONTAK --- */
+/* =========================================
+   4. HALAMAN KONTAK
+   ========================================= */
 .contact-container {
     width: 100%;
     max-width: 1200px; 
@@ -265,14 +334,49 @@ body {
     width: 100%;
 }
 
-.contact-card p {
-    color: #555;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    margin-bottom: 10px;
+.contact-detail {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* --- TAMPILAN RESPONSIVE HP --- */
+.phone-number, .email-link {
+    color: #0077b6;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.phone-number:hover, .email-link:hover {
+    color: #023e8a;
+}
+
+.toast {
+    visibility: hidden;
+    opacity: 0;
+    background-color: #10b981;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* =========================================
+   5. RESPONSIVE UNTUK HP
+   ========================================= */
 @media (max-width: 900px) {
     .menu-toggle {
         display: flex; 
@@ -318,9 +422,15 @@ body {
     .hero h1, .page-header h1 {
         font-size: 1.8rem;
     }
+
+    .splash-title {
+        font-size: 1.8rem;
+    }
 }
 
-/* --- FOOTER --- */
+/* =========================================
+   6. FOOTER
+   ========================================= */
 footer {
     background-color: #222; 
     color: #aaa; 
