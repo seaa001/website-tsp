@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Beranda - PT Tirta Sukses Perkasa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigasi Utama -->
+    <nav class="navbar">
+        <div class="logo">Tirta Sukses Perkasa</div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="home.html" class="active">Beranda</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner Header -->
+    <header class="hero">
+        <h1>PT Tirta Sukses Perkasa</h1>
+        <p>Plant Pasuruan — Air Minum Dalam Kemasan (AMDK) Berkualitas</p>
+    </header>
+
+    <!-- Konten Utama -->
+    <main class="main-container">
+        
+        <!-- Foto TSP Club -->
+        <div class="image-banner">
+            <img src="tspclub.png" alt="PT Tirta Sukses Perkasa Club">
+        </div>
+
+        <!-- Bagian Tentang Kami -->
+        <section class="section-box">
+            <h2 class="section-title">Tentang Kami</h2>
+            <p class="about-text">
+                <strong>PT Tirta Sukses Perkasa (Plant Pasuruan)</strong> adalah perusahaan yang bergerak di bidang produksi Air Minum Dalam Kemasan (AMDK). Kami berdedikasi untuk menyediakan air minum yang bersih, sehat, dan menyegarkan bagi seluruh masyarakat Indonesia. Dengan pabrik yang didukung teknologi modern dan proses higienis, kami terus menjaga kualitas terbaik di setiap tetes air yang kami produksi.
+            </p>
+        </section>
+
+        <!-- Bagian Produk Kami (Emoji Diganti Gambar) -->
+        <section class="section-box">
+            <h2 class="section-title">Produk Kami</h2>
+            <p class="about-text">
+                Kami menghadirkan berbagai varian kemasan air mineral berkualitas tinggi untuk memenuhi berbagai kebutuhan konsumsi Anda:
+            </p>
+
+            <div class="product-grid">
+                <!-- Produk 1: Gelas -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <img src="gelas.png" alt="Kemasan Gelas">
+                    </div>
+                    <h3>Kemasan Gelas (Cup)</h3>
+                    <p><strong>Ukuran 220 ml:</strong> Sangat praktis untuk kebutuhan hidrasi pada acara keluarga, rapat, dan katering.</p>
+                </div>
+
+                <!-- Produk 2: Botol -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <img src="botol.png" alt="Kemasan Botol">
+                    </div>
+                    <h3>Kemasan Botol</h3>
+                    <p><strong>Ukuran 330 ml & 600 ml:</strong> Ideal dan mudah dibawa bepergian, berolahraga, maupun aktivitas sehari-hari.</p>
+                </div>
+
+                <!-- Produk 3: Galon -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <img src="galon.png" alt="Kemasan Galon">
+                    </div>
+                    <h3>Kemasan Galon</h3>
+                    <p><strong>Ukuran 19 Liter:</strong> Pilihan utama higienis untuk konsumsi air minum keluarga di rumah atau operasional kantor.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 PT Tirta Sukses Perkasa - Plant Pasuruan. Project Akhir PKL.
+    </footer>
+
+    <!-- Script Hamburger Menu -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('is-active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

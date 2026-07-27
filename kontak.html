@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Kontak - PT Tirta Sukses Perkasa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <div class="logo">Tirta Sukses Perkasa</div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="home.html">Beranda</a></li>
+
+            <li><a href="kontak.html" class="active">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Judul Halaman Kontak -->
+    <header class="page-header">
+        <h1>Hubungi Kami</h1>
+        <p>Informasi lokasi dan kontak PT Tirta Sukses Perkasa Plant Pasuruan</p>
+    </header>
+
+    <!-- Isi Konten Kontak (Disebar 3 Kolom) -->
+    <main class="contact-container">
+        
+        <!-- Kotak 1: Peta -->
+        <div class="contact-card map-card">
+            <!-- Peta -->
+            <iframe src="https://maps.google.com/maps?q=PT%20Tirta%20Sukses%20Perkasa%20Pasuruan&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            <!-- Teks link ke Google Maps -->
+            <div class="map-link-area">
+                <a href="https://www.google.com/maps/search/?api=1&query=PT+Tirta+Sukses+Perkasa+Pasuruan" target="_blank">📍 Lihat di Google Maps</a>
+            </div>
+        </div>
+
+        <!-- Kotak 2: Telepon & Email -->
+        <div class="contact-card">
+            <div class="icon-symbol">📞</div>
+            <h2>Kontak Layanan</h2>
+            <p>
+                <strong>Telepon:</strong><br>
+                (0343) 633722
+            </p>
+            <p>
+                <strong>Email:</strong><br>
+                info@tirtasuksesperkasa.co.id
+            </p>
+        </div>
+
+        <!-- Kotak 3: Jam Operasional -->
+        <div class="contact-card">
+            <div class="icon-symbol">🕒</div>
+            <h2>Jam Operasional</h2>
+            <p>
+                <strong>Senin - Jumat:</strong><br>
+                08.00 - 16.00 WIB
+            </p>
+            <p>
+                <strong>Sabtu - Minggu:</strong><br>
+                Tutup (Libur)
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 PT Tirta Sukses Perkasa - Plant Pasuruan. Project Akhir PKL.
+    </footer>
+
+    <!-- Script Hamburger Menu -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('is-active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
