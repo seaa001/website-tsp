@@ -20,6 +20,7 @@
 
         <ul class="nav-links" id="nav-menu">
             <li><a href="home.html" class="active">Beranda</a></li>
+            <li><a href="kualitas.html">Kualitas</a></li>
             <li><a href="kontak.html">Kontak</a></li>
         </ul>
     </nav>
@@ -35,7 +36,7 @@
         
         <!-- Foto TSP Club -->
         <div class="image-banner">
-            <img src="tspclub.png" alt="PT Tirta Sukses Perkasa Club">
+            <img src="photos/tspclub.png" alt="PT Tirta Sukses Perkasa Club">
         </div>
 
         <!-- Bagian Tentang Kami -->
@@ -57,7 +58,7 @@
                 <!-- Produk 1: Gelas -->
                 <div class="product-card">
                     <div class="product-icon">
-                        <img src="gelas.png" alt="Kemasan Gelas">
+                        <img src="photos/gelas.png" alt="Kemasan Gelas">
                     </div>
                     <h3>Kemasan Gelas (Cup)</h3>
                     <p><strong>Ukuran 220 ml:</strong> Sangat praktis untuk kebutuhan hidrasi pada acara keluarga, rapat, dan katering.</p>
@@ -66,7 +67,7 @@
                 <!-- Produk 2: Botol -->
                 <div class="product-card">
                     <div class="product-icon">
-                        <img src="botol.png" alt="Kemasan Botol">
+                        <img src="photos/botol.png" alt="Kemasan Botol">
                     </div>
                     <h3>Kemasan Botol</h3>
                     <p><strong>Ukuran 330 ml & 600 ml:</strong> Ideal dan mudah dibawa bepergian, berolahraga, maupun aktivitas sehari-hari.</p>
@@ -75,14 +76,48 @@
                 <!-- Produk 3: Galon -->
                 <div class="product-card">
                     <div class="product-icon">
-                        <img src="galon.png" alt="Kemasan Galon">
+                        <img src="photos/galon.png" alt="Kemasan Galon">
                     </div>
                     <h3>Kemasan Galon</h3>
                     <p><strong>Ukuran 19 Liter:</strong> Pilihan utama higienis untuk konsumsi air minum keluarga di rumah atau operasional kantor.</p>
                 </div>
             </div>
         </section>
+        <!-- Seksyen FAQ (Pertanyaan Umum) -->
+        <div class="section-box faq-container">
+            <h2 class="section-title">Pertanyaan Umum (FAQ)</h2>
+            <p class="about-text" style="margin-bottom: 20px;">
+                Temukan jawaban untuk pertanyaan yang sering diajukan seputar produk dan layanan kami.
+            </p>
 
+            <div class="faq-item">
+                <button class="faq-question">Apakah galon dibersihkan sebelum diisi ulang? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">
+                    <p>Tentu saja. Setiap galon kosong yang dikembalikan akan melalui proses pencucian higienis bertekanan tinggi (High-Pressure Washing) dan sterilisasi berlapis sebelum diisi ulang untuk menjamin keamanan air minum Anda.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Bagaimana cara memesan produk dalam jumlah besar (Grosir/Distributor)? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">
+                    <p>Untuk pemesanan skala besar atau pendaftaran agen/distributor, Anda dapat menghubungi tim *sales* kami melalui nomor telepon atau email yang tertera di halaman Kontak. Kami memiliki penawaran harga khusus untuk mitra B2B.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Berapa lama masa kadaluarsa (Expired Date) produk AMDK ini? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">
+                    <p>Produk kami memiliki masa simpan optimal hingga 2 tahun sejak tanggal produksi untuk kemasan botol dan gelas, serta 3-6 bulan untuk kemasan galon, selama disimpan di tempat yang sejuk dan terhindar dari sinar matahari langsung.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">Apakah pabrik menerima kunjungan industri? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">
+                    <p>Ya, PT Tirta Sukses Perkasa Plant Pasuruan menerima kunjungan industri untuk keperluan edukasi maupun instansi. Silakan kirimkan surat permohonan kunjungan resmi melalui email kami untuk penjadwalan.</p>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -100,6 +135,26 @@
             navMenu.classList.toggle('active');
         });
     </script>
+<script>
+    // Script untuk FAQ Accordion (Buka Tutup Jawaban)
+    const faqQuestions = document.querySelectorAll('.faq-question');
 
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            const faqAnswer = question.nextElementSibling;
+            
+            // Mengubah ikon + menjadi x
+            faqItem.classList.toggle('active');
+
+            // Memunculkan jawaban ke bawah
+            if (faqItem.classList.contains('active')) {
+                faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px";
+            } else {
+                faqAnswer.style.maxHeight = 0;
+            }
+        });
+    });
+</script>
 </body>
 </html>

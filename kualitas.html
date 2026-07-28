@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Sertifikasi & Kualitas - PT Tirta Sukses Perkasa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigasi Utama -->
+    <nav class="navbar">
+        <div class="logo">Tirta Sukses Perkasa</div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="home.html">Beranda</a></li>
+            <li><a href="kualitas.html" class="active">Kualitas</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Halaman -->
+    <header class="page-header">
+        <h1>Sertifikasi & Kualitas</h1>
+        <p>Komitmen kami menghadirkan air minum yang higienis, aman, dan berstandar tinggi</p>
+    </header>
+
+    <!-- Isi Konten Kualitas -->
+    <main class="main-container">
+        
+        <!-- Seksyen Standar Mutu -->
+        <div class="section-box">
+            <h2 class="section-title">Legalitas & Standar Mutu</h2>
+            <p class="about-text">
+                Seluruh lini produksi PT Tirta Sukses Perkasa Plant Pasuruan telah diawasi dengan ketat dan memenuhi standar regulasi nasional maupun internasional untuk menjamin mutu produk.
+            </p>
+            
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">🇮🇩</div>
+                    <h3>SNI</h3>
+                    <p>Memenuhi Standar Nasional Indonesia untuk Air Minum Dalam Kemasan.</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">✅</div>
+                    <h3>BPOM RI</h3>
+                    <p>Terdaftar resmi dan diawasi oleh Badan Pengawas Obat dan Makanan.</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🕌</div>
+                    <h3>Halal MUI</h3>
+                    <p>Tersertifikasi Halal oleh Majelis Ulama Indonesia.</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🌍</div>
+                    <h3>ISO 9001</h3>
+                    <p>Menerapkan Sistem Manajemen Mutu berstandar internasional.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seksyen Proses Produksi -->
+        <div class="section-box">
+            <h2 class="section-title">Proses Produksi Terpadu</h2>
+            <p class="about-text">
+                Air diproses menggunakan teknologi modern tanpa tersentuh tangan secara langsung untuk menjaga kemurniannya dari sumber hingga ke tangan Anda.
+            </p>
+
+            <div class="step-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Filtrasi Bertahap</h3>
+                    <p>Air sumber disaring melalui *Sand Filter* dan *Carbon Filter* untuk menghilangkan partikel makro, bau, dan rasa.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Ozonisasi & UV</h3>
+                    <p>Sterilisasi menggunakan teknologi Ozon dan sinar Ultra Violet (UV) untuk membunuh bakteri dan mikroorganisme secara total.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Auto-Filling</h3>
+                    <p>Proses pengisian air ke dalam kemasan dan penutupan segel (capping) dilakukan secara otomatis oleh mesin berteknologi tinggi.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 PT Tirta Sukses Perkasa - Plant Pasuruan. Project Akhir PKL.
+    </footer>
+
+    <!-- Script Hamburger Menu -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('is-active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
