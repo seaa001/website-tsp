@@ -1,14 +1,11 @@
-/* =========================================
-   STYLE UTAMA - PT TIRTA SUKSES PERKASA
-   ========================================= */
-
+/* atur dasar */
 * {
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
     font-family: 'Segoe UI', Tahoma, sans-serif; 
 }
-
+/* bagian utama */
 body {
     background-color: #f8f9fa; 
     color: #333; 
@@ -17,9 +14,7 @@ body {
     min-height: 100vh; 
 }
 
-/* =========================================
-   1. SPLASH SCREEN (HALAMAN UTAMA/INDEX)
-   ========================================= */
+/* 1. splash screen */
 body.splash-screen {
     display: flex;
     justify-content: center;
@@ -30,28 +25,27 @@ body.splash-screen {
     text-align: center;
     overflow: hidden;
 }
-
+/* isi */
 .splash-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     animation: fadeIn 0.8s ease-in-out;
 }
-
+/* judul */
 .splash-title {
     font-size: 2.4rem;
     font-weight: 800;
     margin-bottom: 8px;
     letter-spacing: 1px;
 }
-
+/* subjudul */
 .splash-subtitle {
     font-size: 1.2rem;
     opacity: 0.9;
     margin-bottom: 35px;
 }
-
-/* Animasi Putaran Loading */
+/* anim lodink */
 .loader {
     width: 45px;
     height: 45px;
@@ -60,20 +54,30 @@ body.splash-screen {
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
-
+/* anim putar */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+    0% { 
+        transform: rotate(0deg); 
+    }
 
+    100% { 
+        transform: rotate(360deg); 
+    }
+}
+/* anim muncul */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20deg); }
-    to { opacity: 1; transform: translateY(0); }
+    from { 
+        opacity: 0; 
+        transform: translateY(20deg); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
 }
 
-/* =========================================
-   2. NAVIGASI UTAMA (NAVBAR)
-   ========================================= */
+
+/* 2.navigasi utama */
 .navbar {
     display: flex; 
     justify-content: space-between; 
@@ -85,41 +89,40 @@ body.splash-screen {
     top: 0; 
     z-index: 100; 
 }
-
+/* logo navbar */
 .navbar .logo {
     color: #0077b6; 
     font-weight: 800; 
     font-size: 1.5rem; 
     letter-spacing: 1px; 
 }
-
+/* link menu */
 .nav-links {
     list-style: none; 
     display: flex; 
     gap: 25px; 
     transition: all 0.3s ease; 
 }
-
+/* teks link */
 .nav-links li a {
     text-decoration: none; 
     color: #555;
     font-weight: 600; 
     transition: color 0.3s; 
 }
-
+/* efek link */
 .nav-links li a:hover,
 .nav-links li a.active {
     color: #0077b6; 
 }
-
-/* Menu Hamburger HP */
+/* tombol menu */
 .menu-toggle {
     display: none; 
     flex-direction: column; 
     cursor: pointer; 
     gap: 5px; 
 }
-
+/* garis burger */
 .menu-toggle .bar {
     width: 25px; 
     height: 3px; 
@@ -127,8 +130,7 @@ body.splash-screen {
     transition: all 0.3s ease-in-out; 
     border-radius: 5px; 
 }
-
-/* Banner Header */
+/* banner header */
 .hero, .page-header {
     background: linear-gradient(135deg, #023e8a, #0077b6);
     color: white;
@@ -136,20 +138,19 @@ body.splash-screen {
     padding: 50px 20px;
     margin-bottom: 40px;
 }
-
+/* judul banner */
 .hero h1, .page-header h1 {
     font-size: 2.2rem;
     margin-bottom: 10px;
 }
-
+/* deskripsi banner */
 .hero p, .page-header p {
     font-size: 1.1rem;
     opacity: 0.9;
 }
 
-/* =========================================
-   3. HALAMAN BERANDA (HOME)
-   ========================================= */
+
+/* 3. Halaman home */
 .main-container {
     width: 100%;
     max-width: 1100px;
@@ -159,21 +160,21 @@ body.splash-screen {
     flex-direction: column;
     gap: 30px;
 }
-
+/* Banner gambar */
 .image-banner {
     width: 100%;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
-
+/* Gambar banner */
 .image-banner img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
 }
-
+/* Kotak section */
 .section-box {
     background-color: #ffffff;
     padding: 40px 30px;
@@ -181,7 +182,7 @@ body.splash-screen {
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     border-top: 5px solid #0096c7;
 }
-
+/* Judul section */
 .section-title {
     color: #023e8a;
     font-size: 1.8rem;
@@ -189,7 +190,7 @@ body.splash-screen {
     position: relative;
     padding-bottom: 10px;
 }
-
+/* Garis judul */
 .section-title::after {
     content: '';
     position: absolute;
@@ -199,20 +200,20 @@ body.splash-screen {
     height: 3px;
     background-color: #0096c7;
 }
-
+/* Teks tentang */
 .about-text {
     color: #555;
     font-size: 1.05rem;
     line-height: 1.8;
 }
-
+/* Daftar produk */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     margin-top: 25px;
 }
-
+/* Kartu produk */
 .product-card {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
@@ -221,12 +222,12 @@ body.splash-screen {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+/* Efek kartu */
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
-
+/* Ikon produk */
 .product-icon {
     width: 100px;
     height: 100px;
@@ -235,28 +236,27 @@ body.splash-screen {
     align-items: center;
     justify-content: center;
 }
-
+/* Gambar ikon */
 .product-icon img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
 }
-
+/* Nama produk */
 .product-card h3 {
     color: #023e8a;
     font-size: 1.25rem;
     margin-bottom: 10px;
 }
-
+/* Deskripsi produk */
 .product-card p {
     color: #666;
     font-size: 0.95rem;
     line-height: 1.5;
 }
 
-/* =========================================
-   4. HALAMAN KONTAK
-   ========================================= */
+
+/* 4.Halaman kontak */
 .contact-container {
     width: 100%;
     max-width: 1200px; 
@@ -266,7 +266,7 @@ body.splash-screen {
     grid-template-columns: repeat(3, 1fr); 
     gap: 30px; 
 }
-
+/* Kartu kontak */
 .contact-card {
     background-color: #ffffff;
     padding: 40px 30px;
@@ -280,18 +280,18 @@ body.splash-screen {
     align-items: center;
     height: 100%;
 }
-
+/* Efek kontak */
 .contact-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
-
+/* Kartu map */
 .map-card {
     padding: 0;
     overflow: hidden;
     justify-content: space-between;
 }
-
+/* Tampilan map */
 .map-card iframe {
     width: 100%;
     height: 100%;
@@ -299,14 +299,14 @@ body.splash-screen {
     border: 0;
     flex-grow: 1;
 }
-
+/* Area link map */
 .map-link-area {
     width: 100%;
     padding: 15px 10px;
     background-color: #f8f9fa;
     border-top: 1px solid #eaeaea;
 }
-
+/* Link lokasi */
 .map-link-area a {
     text-decoration: none;
     color: #0077b6;
@@ -314,17 +314,17 @@ body.splash-screen {
     font-size: 0.95rem;
     transition: color 0.3s;
 }
-
+/* Hover lokasi */
 .map-link-area a:hover {
     color: #023e8a;
     text-decoration: underline;
 }
-
+/* Simbol kontak */
 .icon-symbol {
     font-size: 2.5rem;
     margin-bottom: 15px;
 }
-
+/* Judul kontak */
 .contact-card h2 {
     color: #023e8a;
     font-size: 1.4rem;
@@ -333,14 +333,14 @@ body.splash-screen {
     padding-bottom: 10px;
     width: 100%;
 }
-
+/* Detail kontak */
 .contact-detail {
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+/* Nomor dan email */
 .phone-number, .email-link {
     color: #0077b6;
     text-decoration: none;
@@ -350,11 +350,11 @@ body.splash-screen {
     cursor: pointer;
     transition: color 0.2s;
 }
-
+/* Hover link */
 .phone-number:hover, .email-link:hover {
     color: #023e8a;
 }
-
+/* Notifikasi kecil */
 .toast {
     visibility: hidden;
     opacity: 0;
@@ -368,15 +368,14 @@ body.splash-screen {
     vertical-align: middle;
     transition: opacity 0.2s ease, visibility 0.2s ease;
 }
-
+/* Toast aktif */
 .toast.show {
     visibility: visible;
     opacity: 1;
 }
 
-/* =========================================
-   5. RESPONSIVE UNTUK HP
-   ========================================= */
+
+/* 5.Responsive HP */
 @media (max-width: 900px) {
     .menu-toggle {
         display: flex; 
@@ -395,42 +394,32 @@ body.splash-screen {
         overflow: hidden; 
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
-
     .nav-links.active {
         padding: 20px 0; 
         max-height: 200px; 
     }
-
     .nav-links li {
         margin: 10px 0; 
     }
-
     .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; } 
     .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); } 
     .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); } 
-
     .product-grid,
     .contact-container {
         grid-template-columns: 1fr;
         max-width: 500px;
     }
-
     .map-card iframe {
         height: 300px;
     }
-
     .hero h1, .page-header h1 {
         font-size: 1.8rem;
     }
-
     .splash-title {
         font-size: 1.8rem;
     }
 }
-
-/* =========================================
-   6. FOOTER
-   ========================================= */
+/* Bagian footer */
 footer {
     background-color: #222; 
     color: #aaa; 
@@ -440,18 +429,15 @@ footer {
     margin-top: auto; 
 }
 
-/* =========================================
-   7. HALAMAN KUALITAS & SERTIFIKASI
-   ========================================= */
 
-/* Grid Sertifikasi */
+/* 6. Halaman kualitas */
 .cert-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-top: 30px;
 }
-
+/* Kartu sertifikat */
 .cert-card {
     background-color: #f8f9fa;
     border: 1px solid #e2e8f0;
@@ -460,37 +446,36 @@ footer {
     text-align: center;
     transition: transform 0.3s ease;
 }
-
+/* Efek sertifikat */
 .cert-card:hover {
     transform: translateY(-5px);
     border-color: #0096c7;
 }
-
+/* Ikon sertifikat */
 .cert-icon {
     font-size: 2.5rem;
     margin-bottom: 15px;
 }
-
+/* Judul sertifikat */
 .cert-card h3 {
     color: #023e8a;
     font-size: 1.1rem;
     margin-bottom: 8px;
 }
-
+/* Deskripsi sertifikat */
 .cert-card p {
     color: #666;
     font-size: 0.9rem;
     line-height: 1.5;
 }
-
-/* Grid Proses Produksi */
+/* Alur produksi */
 .step-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     margin-top: 30px;
 }
-
+/* Kartu proses */
 .step-card {
     background-color: #ffffff;
     border-left: 5px solid #0096c7;
@@ -498,7 +483,7 @@ footer {
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     border-radius: 0 10px 10px 0;
 }
-
+/* Nomor proses */
 .step-number {
     font-size: 2.5rem;
     font-weight: 800;
@@ -506,47 +491,43 @@ footer {
     margin-bottom: 10px;
     line-height: 1;
 }
-
+/* Judul proses */
 .step-card h3 {
     color: #023e8a;
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
-
+/* Deskripsi proses */
 .step-card p {
     color: #555;
     font-size: 0.95rem;
     line-height: 1.6;
 }
-
-/* Responsif untuk Halaman Kualitas */
+/* Responsive kualitas */
 @media (max-width: 900px) {
     .cert-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .step-grid {
         grid-template-columns: 1fr;
     }
 }
-
 @media (max-width: 500px) {
     .cert-grid {
         grid-template-columns: 1fr;
     }
 }
-
-/* =========================================
-   8. FAQ (PERTANYAAN UMUM) - ACCORDION
-   ========================================= */
+/* 9. Bagian FAQ */
 .faq-container {
     margin-top: 30px;
 }
-
+/* Item FAQ */
 .faq-item {
     border-bottom: 1px solid #e2e8f0;
     margin-bottom: 10px;
 }
-
+/* Tombol pertanyaan */
 .faq-question {
     width: 100%;
     background: none;
@@ -562,47 +543,121 @@ footer {
     align-items: center;
     transition: color 0.3s ease;
 }
-
+/* Hover FAQ */
 .faq-question:hover {
     color: #0077b6;
 }
-
+/* Ikon FAQ */
 .faq-icon {
     font-size: 1.5rem;
     color: #0096c7;
     transition: transform 0.3s ease;
 }
-
-/* Menyembunyikan jawaban secara default */
+/* Jawaban tersembunyi */
 .faq-answer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
 }
-
+/* Isi jawaban */
 .faq-answer p {
     color: #555;
     font-size: 0.95rem;
     line-height: 1.6;
     padding-bottom: 18px;
 }
-
-/* Animasi perubahan ikon tambah (+) menjadi silang (x) saat diklik */
+/* Animasi ikon + */
 .faq-item.active .faq-icon {
     transform: rotate(45deg); 
     color: #d90429;
 }
 
-/* Menyembunyikan jawaban secara default */
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out; /* Animasi meluncur halus */
+/* =========================================
+   STYLING HALAMAN KONTAK & SALIN NOMOR
+   ========================================= */
+
+/* Grid Tata Letak Halaman Kontak */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 20px;
 }
 
-/* Animasi perubahan ikon tambah (+) menjadi silang (x) saat diklik */
-.faq-item.active .faq-icon {
-    transform: rotate(45deg); 
-    color: #d90429;
+.contact-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border-top: 4px solid #0096c7;
+    text-align: center;
 }
 
+.contact-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.contact-card h3 {
+    color: #023e8a;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Styling Peta iframe */
+.contact-card iframe {
+    width: 100%;
+    height: 180px;
+    border: 0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.map-link-area a {
+    color: #0077b6;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.map-link-area a:hover {
+    text-decoration: underline;
+}
+
+/* Styling Tombol Salin Telepon */
+.copy-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.copy-btn:hover {
+    transform: scale(1.2);
+    background-color: #e2e8f0;
+}
+
+.copy-msg {
+    display: none;
+    color: #2b9348;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+/* Responsive Tampilan Layar HP */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
