@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Kontak - PT Tirta Sukses Perkasa</title>
+    <title>Hubungi Kami - PT Tirta Sukses Perkasa</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Navigasi -->
+    <!-- Navigasi Utama -->
     <nav class="navbar">
         <div class="logo">Tirta Sukses Perkasa</div>
         
@@ -25,52 +25,64 @@
         </ul>
     </nav>
 
-    <!-- Judul Halaman Kontak -->
+    <!-- Header Halaman -->
     <header class="page-header">
         <h1>Hubungi Kami</h1>
         <p>Informasi lokasi dan kontak PT Tirta Sukses Perkasa Plant Pasuruan</p>
     </header>
 
-    <!-- Isi Konten Kontak (Disebar 3 Kolom) -->
-    <main class="contact-container">
+    <!-- Isi Utama Konten Kontak -->
+    <main class="main-container">
         
-        <!-- Kotak 1: Peta -->
-        <div class="contact-card map-card">
-            <!-- Peta -->
-            <iframe src="https://maps.google.com/maps?q=PT%20Tirta%20Sukses%20Perkasa%20Pasuruan&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="contact-grid">
             
-            <!-- Teks link ke Google Maps -->
-            <div class="map-link-area">
-                <a href="https://www.google.com/maps/search/?api=1&query=PT+Tirta+Sukses+Perkasa+Pasuruan" target="_blank">📍 Lihat di Google Maps</a>
+            <!-- Kartu 1: Peta Lokasi -->
+            <div class="contact-card map-card">
+                <h3>📍 Lokasi Pabrik</h3>
+                <iframe 
+                    src="https://maps.google.com/maps?q=PT%20Tirta%20Sukses%20Perkasa%20Pasuruan&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="map-link-area">
+                    <a href="https://www.google.com/maps/search/?api=1&query=PT+Tirta+Sukses+Perkasa+Pasuruan" target="_blank">📍 Lihat di Google Maps</a>
+                </div>
             </div>
-        </div>
 
-        <!-- Kotak 2: Telepon & Email -->
-        <div class="contact-card">
-            <div class="icon-symbol">📞</div>
-            <h2>Kontak Layanan</h2>
-            <p>
-                <strong>Telepon:</strong><br>
-                (0343) 633722
-            </p>
-            <p>
-                <strong>Email:</strong><br>
-                info@tirtasuksesperkasa.co.id
-            </p>
-        </div>
+            <!-- Kartu 2: Informasi Kontak -->
+            <div class="contact-card info-card">
+                <div class="contact-icon">📞</div>
+                <h3>Kontak Layanan</h3>
+                <p>
+                    <strong>Telepon:</strong> (0343) 633722 
+                    <button onclick="copyPhone()" class="copy-btn" title="Salin nomor">📋</button>
+                    <span id="copy-msg" class="copy-msg">Tersalin!</span>
+                </p>
+                <p>
+                    <strong>Email:</strong><br>
+                    <a href="mailto:info@tirtasuksesperkasa.co.id">info@tirtasuksesperkasa.co.id</a>
+                </p>
+                <p>
+                    <strong>Alamat:</strong><br>
+                    Jl. Raya Surabaya - Malang Km 48, Pandaan, Pasuruan, Jawa Timur.
+                </p>
+            </div>
 
-        <!-- Kotak 3: Jam Operasional -->
-        <div class="contact-card">
-            <div class="icon-symbol">🕒</div>
-            <h2>Jam Operasional</h2>
-            <p>
-                <strong>Senin - Jumat:</strong><br>
-                08.00 - 16.00 WIB
-            </p>
-            <p>
-                <strong>Sabtu - Minggu:</strong><br>
-                Tutup (Libur)
-            </p>
+            <!-- Kartu 3: Jam Operasional -->
+            <div class="contact-card hours-card">
+                <div class="contact-icon">⏰</div>
+                <h3>Jam Operasional</h3>
+                <p>
+                    <strong>Senin - Jumat:</strong><br>
+                    08.00 - 16.00 WIB
+                </p>
+                <p>
+                    <strong>Sabtu - Minggu:</strong><br>
+                    Tutup (Libur)
+                </p>
+            </div>
+
         </div>
 
     </main>
@@ -80,15 +92,45 @@
         &copy; 2026 PT Tirta Sukses Perkasa - Plant Pasuruan. Project Akhir PKL.
     </footer>
 
-    <!-- Script Hamburger Menu -->
+    <!-- Script JavaScript -->
     <script>
+        // 1. Script Hamburger Menu (Mobile)
         const mobileMenu = document.getElementById('mobile-menu');
         const navMenu = document.getElementById('nav-menu');
 
-        mobileMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('is-active');
-            navMenu.classList.toggle('active');
-        });
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', () => {
+                mobileMenu.classList.toggle('is-active');
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // 2. Script Salin Nomor Telepon (Anti-Gagal File Lokal)
+        function copyPhone() {
+            const textToCopy = "(0343) 633722";
+            
+            // Membuat elemen textarea sementara
+            const tempTextArea = document.createElement("textarea");
+            tempTextArea.value = textToCopy;
+            document.body.appendChild(tempTextArea);
+            
+            // Seleksi dan salin teks
+            tempTextArea.select();
+            tempTextArea.setSelectionRange(0, 99999); // Untuk perangkat seluler
+            document.execCommand("copy");
+            
+            // Hapus elemen sementara
+            document.body.removeChild(tempTextArea);
+            
+            // Tampilkan pesan "Tersalin!"
+            const msg = document.getElementById('copy-msg');
+            msg.style.display = 'inline';
+            
+            // Sembunyikan kembali pesan setelah 2 detik
+            setTimeout(() => {
+                msg.style.display = 'none';
+            }, 2000);
+        }
     </script>
 
 </body>
